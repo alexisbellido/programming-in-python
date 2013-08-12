@@ -5,8 +5,20 @@ Original version with hardcoded values.
 """
 
 
-meal = float(raw_input("How much did your meal cost?: "))
-tax_rate = float(raw_input("What is the tax rate? "))
+import sys
+
+
+#print sys.argv
+
+#meal = float(raw_input("How much did your meal cost?: "))
+#tax_rate = float(raw_input("What is the tax rate? "))
+
+meal = float(sys.argv[1])
+tax_rate = float(sys.argv[2])
+
+#meal = 20
+#tax_rate = 5
+
 tax = tax_rate / 100.0
 tip = 5
 tax_value = meal * tax
