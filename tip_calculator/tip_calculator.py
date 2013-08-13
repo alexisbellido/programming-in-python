@@ -5,19 +5,23 @@ Original version with hardcoded values.
 """
 
 
-import sys
+from optparse import OptionParser
 
 
-#print sys.argv
+parser = OptionParser()
 
-#meal = float(raw_input("How much did your meal cost?: "))
-#tax_rate = float(raw_input("What is the tax rate? "))
+parser.add_option("-m", "--meal", dest="meal", type="float", help="meal cost")
 
-meal = float(sys.argv[1])
-tax_rate = float(sys.argv[2])
+parser.add_option("-t", "--taxrate", dest="tax_rate", 
+                  type="float", help="tax rate")
 
-#meal = 20
-#tax_rate = 5
+(options, args) = parser.parse_args()
+
+#print options
+#print args
+
+meal = options.meal
+tax_rate = options.tax_rate
 
 tax = tax_rate / 100.0
 tip = 5
