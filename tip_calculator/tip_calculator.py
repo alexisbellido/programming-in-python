@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 """
 Tip calculator.
 Original version with hardcoded values.
