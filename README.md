@@ -1,4 +1,4 @@
 programming-in-python
 =====================
 
-Programming in Python
+Programming in Python examples.
