@@ -36,13 +36,15 @@ print "good emails", good_emails
 output_file = open(output_filepath, 'w')
 
 with open(bad_filepath, 'r') as bad_file:
+    count = 0
     for line in bad_file:
         bad_email = line.strip()
         if bad_email not in good_emails:
+            count += 1
             print "remove this: ", bad_email
             output_file.write(line)
 
 output_file.close()
 
 print "..."
-print "Complete"
+print "Completed and found %d bad emails." % (count,)
