@@ -40,6 +40,7 @@ ordered_lines = OrderedDict(sorted(lines.items(), key = lambda t: int(t[0])))
 
 with open(output_filepath, 'w') as output_file:
     for line in ordered_lines.items():
-        output_file.write('%s,%s\n' % (line[0], line[1]))
+        #output_file.write('%s,%s\n' % (line[0], line[1]))
+        output_file.write("{0} => __( '{1}', 'ev' ),\n".format(line[0], line[1]))
 
 print "Completed" 
